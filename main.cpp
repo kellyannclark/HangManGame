@@ -19,7 +19,7 @@ int main() {
         greet();
 
         // List of possible words
-        vector<string> words = {
+        vector<string>* words = new vector<string>{
             "algorithm", "binary", "compiler", "debug", "encryption",
             "function", "gateway", "hardware", "interface", "java",
             "kernel", "loop", "method", "node", "object",
@@ -28,7 +28,7 @@ int main() {
         };
 
         // Randomly select a word
-        string codeword = words[rand() % words.size()];
+        string codeword = (*words)[rand() % words->size()];
         string answer = string(codeword.length(), '_');
         int misses = 0;
         vector<char> incorrect;
@@ -77,6 +77,9 @@ int main() {
         if (elapsed_time < time_limit) {
             end_game(answer, codeword);
         }
+
+        delete words; // Release the memory
+
 
         cout << "Do you want to play again? (y/n): ";
         cin >> playAgain;
