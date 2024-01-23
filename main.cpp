@@ -34,7 +34,8 @@ int main() {
         vector<char> incorrect;
         bool guess = false;
         char letter;
-        auto elapsed_time = duration_cast<seconds>(steady_clock::now() - start); 
+        auto elapsed_time = duration_cast<seconds>(steady_clock::now() - start);
+
 
         while (answer != codeword && misses < 7) {
             // Check elapsed time
