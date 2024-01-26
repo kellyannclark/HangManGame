@@ -32,7 +32,6 @@ Dynamic Memory Management: Use of "new" and "delete"
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 
 - YouTube   https://www.youtube.com/watch?v=cnn86DfAylA
 - W3Schools https://www.w3schools.com/cpp/
